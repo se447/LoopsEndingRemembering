@@ -16,6 +16,10 @@ public class LoopsEndingRemembering {
         the program should print the sum of the numbers entered by the user (without the number -1).
         
         The program should print how many numbers the user typed (without the number -1).
+        
+        The program should print the average of the numbers the user typed (without the number -1).
+
+
         */
         System.out.println("Type numbers: ");
         int number = Integer.parseInt(reader.nextLine());
@@ -23,16 +27,20 @@ public class LoopsEndingRemembering {
         
         int sum = 0;
         int count = 0;
+        double average = 0;
         while (number != -1) {
             System.out.println(number);
             
             sum += number;
             count += 1; //counts numbers read into program
-            number = Integer.parseInt(reader.nextLine());        
+            average = (double)sum / count;
+            
+            number = Integer.parseInt(reader.nextLine()); //read next number   
         }
         
         System.out.println("Thank you and see you later!");
         System.out.println("The sum is " + sum);
         System.out.println("How many numbers: " + count);
+        System.out.println("Average: " + average);
     }
 }
