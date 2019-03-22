@@ -28,12 +28,20 @@ public class LoopsEndingRemembering {
         int sum = 0;
         int count = 0;
         double average = 0;
+        int even = 0;
+        int odd = 0;
+        
         while (number != -1) {
             System.out.println(number);
             
             sum += number;
             count += 1; //counts numbers read into program
             average = (double)sum / count;
+            if (number % 2 == 0) {
+                even += 1;
+            } else {
+                odd += 1;
+            }
             
             number = Integer.parseInt(reader.nextLine()); //read next number   
         }
@@ -42,5 +50,7 @@ public class LoopsEndingRemembering {
         System.out.println("The sum is " + sum);
         System.out.println("How many numbers: " + count);
         System.out.println("Average: " + average);
+        System.out.println("Even numbers: " + even);
+        System.out.println("Odd numbers: " + odd);
     }
 }
